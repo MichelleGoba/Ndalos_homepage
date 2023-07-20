@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,300;1,400&display=swap');
 *{
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -56,5 +57,25 @@ body, html{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+.text-box .title{
+    font-size: 80px;
+}
 
+.text-box .title span{
+    
+    font-family: 'Clicker Script',sans-serif;
+}
+
+.text-box .title2{
+    font-size: 40px;
+}
+
+button{
+    background-color: rgb(212, 129, 129);
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 20px;
+}
+    
 /* Home section end */

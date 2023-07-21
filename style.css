@@ -1,23 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,300;1,400&display=swap');
 
 *{
-    margin: 0;
+
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-body, html{
-   margin: 0;
-   background-image: linear-gradient(rgba(73, 75, 82, 0.384), rgba(77, 80, 92, 0.452)),
-    url(images/IMG-4767.jpg);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+body{
+    margin: 0;
+    padding: 0;
 }
+
+.navbar{
+    display: flex;
+    justify-content: right;
+
+    color: white;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+
+.navbar-links li{
+    list-style: none;
+    
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    display: block;
+}
+.navbar-links li:hover{
+    background-color:rgba(156, 58, 58, 0.712) ;
+}
+.toggle-button{
+    position:absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
 
 .text-box h1{
     font-size: 80px;
 }
+
 .text-box h1 span{
     font-family: 'Clicker Script', sans-serif;
 }
@@ -34,41 +69,55 @@ button{
     border-radius: 20px; 
 }
 
-.nav-container{
-    flex-wrap: wrap;
-    
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 10px;
+    /* display: none; */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: green;
+    border-radius: 10px;
 }
 
-.nav-container ul{
-    display: flex;
-    gap: 30px;
-    justify-content: right;
-   
+@media (max-width:680px){
+    .toggle-button{
+        display: flex;
+        position: absolute; 
+        right: 25px;
+    } 
+    .navbar-links {
+        display: none; 
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+    }
+    .navbar-links li{
+        text-align: center;
 
-}
+    }
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active{
+        display: flex;
+    }
+    }
 
-.nav-container ul li{
-    list-style: none;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 10px;
-    
-    /* border: 1px solid crimson;
-    border-radius: 10px; */
-    /* border-spacing: 50px; */
-    
-    
-}
-.nav-container ul li a {
-    text-decoration: none;
-    color: white;
-    margin-right: 10px;
-    
-}
 
 /* Home section start */
 .text-box{
+
     width: 90%;
     color: white;
     position: absolute;
@@ -98,4 +147,7 @@ button{
     margin-top: 20px;
 }
     
-/* Home section end */
+/* media quiries */
+ 
+
+Home section end */
